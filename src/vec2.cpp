@@ -1,4 +1,4 @@
-#include <vec2.hpp>
+#include "vec2.hpp"
 
 #include <cmath>
 
@@ -19,6 +19,10 @@ float Vec2::operator * (Vec2& v) {
     return this->x * v.x + this->y * v.y;
 }
 
+Vec2 Vec2::operator * (float k) {
+    return Vec2(this->x * k, this->y * k);
+}
+
 Vec2 Vec2::rotate(float angle_rad) {
     float sin = std::sin(angle_rad);
     float cos = std::cos(angle_rad);
@@ -28,4 +32,8 @@ Vec2 Vec2::rotate(float angle_rad) {
 
 float Vec2::norm_squared() {
     return this->x * this->x + this->y * this->y;
+}
+
+Vec2 Vec2::hadamard(Vec2& v) {
+    return Vec2(this->x * v.x, this->y * v.y);
 }

@@ -1,4 +1,5 @@
-#include <entity.hpp>
+#include "entity.hpp"
+
 #include <ctime>
 
 Entity::Entity(EntityType type) {
@@ -18,4 +19,8 @@ Entity::Entity(EntityType type) {
 
 std::string Entity::getId() {
     return this->id;
+}
+
+Entity::operator std::string() const {
+    return std::string("id: " + this->id);
 }

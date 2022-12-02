@@ -5,9 +5,9 @@
 
 class Component
 {
-private:
-    std::string entity_id;
 public:
+    std::string entity_id;
+    
     Component(std::string& entity_id);
 };
 

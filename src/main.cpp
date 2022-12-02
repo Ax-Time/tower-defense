@@ -1,19 +1,14 @@
 #include <iostream>
-
-#include <entity.hpp>
-#include <vec2.hpp>
-#include <c_transform.hpp>
-
 #include <cmath>
 #include <string>
 
-//Using SDL and standard IO
-// #include <SDL2/SDL.h>
-#include <stdio.h>
+#include "entity.hpp"
+#include "vec2.hpp"
+#include "c_transform.hpp"
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 1920;
-const int SCREEN_HEIGHT = 1080;
+// const int SCREEN_WIDTH = 1920;
+// const int SCREEN_HEIGHT = 1080;
 
 int main( int argc, char* args[] )
 {
@@ -55,7 +50,12 @@ int main( int argc, char* args[] )
     auto b = Vec2(3, 4);
     auto c = Vec2(5, 6);
     auto d = Vec2(1, 1);
-    auto tr = TransformC(a, b, c, d);
+    std::string str = std::string("culo");
+    auto tr = TransformC(str, a, b, c, d);
+
+    auto temp = Vec2(1,1);
+    tr.translate(temp);
+    std::cout << "oke" << std::endl;
 
     tr.pos.x += 1;
 

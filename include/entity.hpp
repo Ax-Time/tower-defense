@@ -16,9 +16,7 @@ public:
     Entity(EntityType type);
     std::string getId();
 
-    operator std::string() const {
-        return std::string("id: " + this->id);
-    }
+    operator std::string() const;
 };
 
 #endif

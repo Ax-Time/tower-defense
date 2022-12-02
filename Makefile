@@ -17,7 +17,7 @@ INCLUDE=./include
 EXE=app
 
 # TODO specify
-LIB_OSX=./lib/osx
+# LIB_OSX=./lib/osx
 
 osx:
-	$(CC) $(SRC) $(CFLAGS) -I$(INCLUDE) -o $(EXE) -L$(LIB_OSX)
+	$(CC) $(SRC) $(CFLAGS) -I$(INCLUDE) -o $(EXE) 
