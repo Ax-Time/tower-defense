@@ -1,4 +1,4 @@
-#include "s_circle_collider.hpp"
+#include "../include/s_circle_collider.hpp"
 
 CollidersQueue CircleColliderS::detectCollisions(std::vector<CircleColliderC>& colliders) {
     CollidersQueue queue;
@@ -14,8 +14,8 @@ CollidersQueue CircleColliderS::detectCollisions(std::vector<CircleColliderC>& c
     return queue;
 }
 
-void CircleColliderS::update(std::vector<CircleColliderC>& colliders, float deltaT) {
-    auto collisions = this->detectCollisions(colliders, deltaT);
+void CircleColliderS::update(std::vector<CircleColliderC>& colliders) {
+    auto collisions = this->detectCollisions(colliders);
     this->applyCollisionEffects(collisions);
 }
 

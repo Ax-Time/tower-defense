@@ -2,9 +2,9 @@
 #include <cmath>
 #include <string>
 
-#include "entity.hpp"
-#include "vec2.hpp"
-#include "c_transform.hpp"
+#include "../include/entity.hpp"
+#include "../include/vec2.hpp"
+#include "../include/c_transform.hpp"
 
 //Screen dimension constants
 // const int SCREEN_WIDTH = 1920;

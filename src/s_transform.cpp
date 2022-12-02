@@ -1,4 +1,4 @@
-#include "s_transform.hpp"
+#include "../include/s_transform.hpp"
 
 void TransformS::updateSpeed(TransformC& tr, float deltaT) {
     Vec2 temp = tr.acc * deltaT;
