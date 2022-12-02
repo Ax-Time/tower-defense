@@ -5,7 +5,7 @@ CC=g++
 CFLAGS= -std=c++17
 
 # LFLAGS specifies the libraries we're linking against
-LFLAGS = -lSDL2
+# LFLAGS = -lSDL2
 
 # SRC specifies which files to compile
 SRC=./src/*.cpp
@@ -20,4 +20,4 @@ EXE=app
 LIB_OSX=./lib/osx
 
 osx:
-	$(CC) $(SRC) $(CFLAGS) $(LFLAGS) -I$(INCLUDE) -o $(EXE) -L$(LIB_OSX)
+	$(CC) $(SRC) $(CFLAGS) -I$(INCLUDE) -o $(EXE) -L$(LIB_OSX)
